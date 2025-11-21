@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Öncesi Pratik</title>
+
+    <style>
+        body {
+            background-color: #8e7838d4;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+            transition: all 0.3s ease;
+            padding: 20px;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            font-size: 4rem;
+            font-weight: bold;
+        }
+        button {
+            background-color: #fff;
+            color: #8e7838d4;
+            border: none;
+            margin-top: 20px;
+            padding: 20px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #000;
+            color: #8e7838d4;
+        }
+        .karanlik-mod {
+            background-color: #222;    /* Koyu arka plan */
+            color: #fff;               /* Beyaz yazı */
+        }
+
+        /* Karanlık modda buton rengi de değişsin */
+        .karanlik-mod button {
+            background-color: #afa89d; /* Turuncu buton */
+            color: black;
+        }
+        .karanlik-mod button:hover {
+            background-color: #ffffff;
+            color: #8e7838d4;
+        }
+        .karanlik-mod h1 {
+            color: #afc835;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Hello React</h1>
+    <button id="karanlik-mod-butonu">Karanlık Mod</button>
+
+    <script>
+        const karanlikModButonu = document.getElementById('karanlik-mod-butonu');
+        
+        const govde = document.body;
+
+        karanlikModButonu.addEventListener('click', () => {
+            govde.classList.toggle('karanlik-mod');
+        });
+    </script>
+
+
+</body>
+</html>
